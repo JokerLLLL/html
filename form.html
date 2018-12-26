@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .td_left {
+             /*align-content: center;*/
+             text-align: left;
+             width: 30%;
+        }
+
+    </style>
+</head>
+<body>
+<h1 align="center">表单</h1>
+<hr color="red">
+    <form action="#" method="get" >
+        <table align="center" bgcolor="#99f38f" width="500" border="10" cellspacing="10" rules="rows">
+            <tr>
+                <td class="td_left">用户名</td>
+                <td class="td_right"><input type="text" name="username" size="16" placeholder="请输入用户名..." maxlength="4"></td>
+            </tr>
+            <tr>
+                <td class="td_left">密码</td>
+                <td class="td_right"><input type="password" name="password" placeholder="请输入密码"></td>
+            </tr>
+            <tr>
+                <td class="td_left">性别</td>
+                <td class="td_right">
+                    男<input type="radio" name="sex" value="man" checked>
+                    女<input type="radio" name="sex" value="man">
+                </td>
+            </tr>
+            <tr>
+                <td class="td_left">头像</td>
+                <td class="td_right"><input type="file" name="file"></td>
+            </tr>
+            <tr>
+                <td class="td_left">兴趣</td>
+                <td class="td_right">
+                    1<input type="checkbox" name="hobby[]" value="1" checked>
+                    2<input type="checkbox" name="hobby[]" value="2" checked>
+                    3<input type="checkbox" name="hobby[]" value="3" checked>
+                    4<input type="checkbox" name="hobby[]" value="4" checked>
+                </td>
+            </tr>
+            <tr>
+                <td>下拉菜单</td>
+                <td>
+                    <select name="select" id="select" size="2" multiple>
+                        <option value="s1">111</option>
+                        <option value="s2">222</option>
+                        <option value="s3">333</option>
+                        <option value="s4" selected >444</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>多行文本</td>
+                <td><textarea name="area" id="area" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" height="300" valign="bottom">
+                按钮<input type="button" name="button" onclick="alert('button clicked')" value="按钮">
+                提交按钮<input type="submit" value="submit" name="submit">
+                图片按钮<input type="image" name="img" id="" src="img.gif">
+                </td>
+            </tr>
+        </table>
+
+    </form>
+
+</body>
+</html>

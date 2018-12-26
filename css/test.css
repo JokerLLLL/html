@@ -1,0 +1,50 @@
+.body {
+    padding: 0;
+    margin: 0;
+}
+.article {
+    font-size: 50px;
+    color: #38cfad;
+}
+h1,h2,h3{
+    color: #2093d9;
+}
+
+
+a:link{
+    color: #00cf03;
+}
+a:visited{
+    color: #0003cf;
+}
+a:hover{
+    color: #cf0ecf;
+}
+a:active{
+    color: #cf932a;
+}
+
+.active:hover{
+    color: #38cfad;
+}
+.active:active{
+    font-size: 60px;
+    color: #cf2332;
+}
+
+h1.title1{
+    font-family: "Microsoft YaHei UI Light",SansSerif;
+}
+p.content1{
+    font-size: 0.5em;
+    font-family: "Times New Roman","宋体";
+}
+
+.in{
+    font-size: 1in;
+}
+
+.top{
+    font-size: 10px;
+    color: #cfa41f;
+}

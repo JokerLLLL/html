@@ -1,0 +1,24 @@
+div.test1{
+    width: 1000px;
+    height: 700px;
+    border: 1px #cf0ecf solid;
+    background-image: url(24.jpg);
+    background-color: #38cfad;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: 50%  50%;
+}
+div.test2{
+    width: 1000px;
+    height: 700px;
+    border: 1px #cf0ecf solid;
+    background: url("24.jpg") repeat #cf2781 5% 5%;
+}
+
+
+div.list1{
+
+}
+div.list2{
+
+}

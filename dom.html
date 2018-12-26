@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .dom{
+        color: #cf2332;
+    }
+    .undom{
+        color: #00cf03;
+    }
+
+</style>
+<body>
+<div>HTML事件</div>
+<input type="button" value="清除"
+       onclick="setTimeout(
+                function(){
+                alert('缓存已清除')
+                },1000);"
+       onmousemove="fuc(this)">
+
+<div class="dom" id="dom">DOM0事件</div>
+<div class="dom" id="dom2">DOM0事件</div>
+<script>
+    function fuc($dom) {
+        console.log($dom);
+        $dom.style.background = 'red';
+    }
+
+    //获取
+    document.getElementById('dom').getElementsByTagName('li');
+    var div = document.getElementsByClassName('dom');
+    for(var i=0,len=div.length;i < len;i++) {
+        div[i].setAttribute('date-value','chen');
+    }
+    console.log(div);
+     div[0].onclick = function () {
+         console.log(this)
+         this.className = 'undom';
+         this.innerHTML = "解锁"
+     }
+
+//    div[1].onclick = function () {
+//        console.log(this)
+//        this.className = 'undom';
+//        this.innerHTML = "解锁"
+//    }
+
+    var $out = 'aaaa';
+
+     $f = function () {
+         var $c = 'ccc';
+         console.log($out);
+     }
+     div[1].onclick = function () {
+         $in = 'bbb';
+         $f();
+         console.log($out);
+     }
+//     console.log($c);
+
+
+</script>
+</body>
+</html>

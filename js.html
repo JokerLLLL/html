@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    $obj = {
+        msg: function () {
+            console.log('tes2t')
+        }
+    }
+    //     $obj = function () {
+    //         console.log('test2');
+    //     }
+    $obj.msg()
+    $arr = new Array(15);
+    $arr[10]  ='ttt';
+    $arr[10] = undefined;
+    console.log($arr[6]);
+    console.log($arr.length = 7);
+    console.log($arr.join(','));
+    $arr.splice(0,5,'aa','bb','cc','dd','ff')
+    console.log($arr);
+
+    //     console.log(typeof ($a));
+    //    function test_new() {
+    //        console.log(arguments);
+    //        console.log(this.arguments);
+    //        console.log(this.prototype);
+    //    }
+    //    new test_new(1);
+    //    console.log(new test_new());
+    //    $f = new test_new()
+    //
+    //     console.log(new Date().get());
+    //     console.log(new Date().getFullYear);
+    $file = 'aaa.txtff';
+        $index = $file.indexOf('.');
+        if($index < 0){
+            console.log('error');
+        }else{
+            $scriptName = $file.substr($index+1);
+            console.log($scriptName);
+        }
+
+        $arr = $file.split('.')[0].substr(0,1);
+        console.log($arr[0]);
+
+        $str = 'a-a-ff-sss-iiiis-';
+        while($str.indexOf('-') != -1) {
+             $index = $str.indexOf('-');
+             $str = $str.replace('-',$str.charAt($index+1).toUpperCase())
+        }
+        console.log($str);
+
+</script>
+</html>

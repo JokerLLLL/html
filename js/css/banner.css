@@ -1,0 +1,174 @@
+@font-face {font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot') format('embedded-opentype'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link,a:visited{
+    color:#5e5e5e;
+}
+
+
+.main{
+    width: 1400px;
+    height: 460px;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.menu{
+    height: 460px;
+    width: 200px;
+    float: left;
+    background: url("../img/bg2.jpg") no-repeat;
+    line-height: 70px;
+    position: relative;
+}
+.menu a{
+    color: #fff;
+}
+
+.menu .menu-item{
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFF;
+    padding-left:  25px;
+    text-align: left;
+    border-bottom: #ffffff 1px solid;
+    position: relative;
+}
+
+.menu-item:hover{
+    background: rgba(50,50,50,0.5);
+}
+
+.menu-item i{
+    position: absolute;
+    right: 32px;
+    color: rgba(255,255,255,0.5);
+    font-style:normal;
+    font-weight:normal;
+    font-family:"iconfont";
+    font-size: 40px;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+.sub-menu{
+    border:1px solid #d9dde1;
+    background:#fff;
+    position: absolute;
+    left: 200px;
+    top: 0px;
+    width: 728px;
+    height: 458px;
+    z-index: 581;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+.inner-box{
+    width:100%;
+    height:100%;
+    background:url(../img/fe.png) no-repeat;
+    display:none;
+}
+
+.sub-inner-box{
+    width: 80%;
+    margin-left: 40px;
+    overflow: hidden;
+}
+.sub-inner-box .title{
+    color: #f01414;
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.sub-row{
+    margin-bottom:25px;
+}
+
+
+.main .banner{
+    width:1200px;
+    height:460px;
+    overflow:hidden;
+    position:relative;
+}
+
+.banner-list{
+    width:1200px;
+    height:460px;
+    float:left;
+    display: none;
+}
+
+.banner-active{
+    display: block;
+}
+
+.banner-list img{
+    width: 1200px;
+    height: 460px;
+}
+
+.button {
+    position: absolute;
+    width: 40px;
+    height:80px;
+    top: 50%;
+    left: 244px;
+    margin-top: -40px;
+    /*background: #ee6162;*/
+    background: url("../img/arrow.png") no-repeat center center;
+}
+.button:hover{
+    background-color: #333;
+    opacity: 0.6;
+}
+
+.prev{
+    transform: rotate(180deg);
+}
+.next{
+    left: auto;
+    right: 0;
+}
+
+.main .dots{
+    position: absolute;
+    text-align: right;
+    right: 0;
+    bottom: 24px;
+    line-height: 12px;
+    padding-right: 45px;
+}
+
+.main .dots span{
+    border-radius: 50%;
+    margin-left: 12px;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background-color: rgba(7, 17, 27, 0.4);
+    cursor: pointer;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8) inset;
+}
+
+.main .dots span.active{
+    box-shadow: 0 0 0 2px rgba(7, 17, 27, 0.4) inset;
+    background-color: #ffffff;
+}
