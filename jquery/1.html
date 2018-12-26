@@ -62,13 +62,26 @@
     lis = $('.li1').add('.li2').not('li1').filter('.li2').filter(function(index){
         return $(this).hasClass('.item4');
     })
-    console.log(lis);
-    
-    
-    
-    
-    
 
+    //遍历jquery对象数组 
+
+    $('div').slice(3);
+
+    //查询并组成数组
+    clazz = $('div').map(function(index,elemnet){
+        return this.id;
+    })
+
+    console.log(clazz);
+    
+    $('div').each(function(index,domElement){
+        this.title = this.innerText;
+    })
+    // end 去读取历史记录的堆栈 并弹出
+    $('div').find('.class').find('ul').end().end();
+
+
+    
 </script>
 </body>
 </html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="./jquery-3.3.1/jquery-3.3.1.js"></script>
+<body>
+    <div class="div-class">
+        <lu class="test" id="first" data-value='this_value'>
+            <li class="li_test">test1</li>
+            <li class="li_test">test2</li>
+            <li class="li_test">test3</li>
+            <li class="li_test">test3</li>
+            <li class="li_test">test4</li>
+        </lu>
+        <select name="sel" id="sel">
+            <option value="1" >1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+            <option value="4">4</option>
+        </select>
+    </div>
+
+<script>
+    $(function(){
+
+        var lu = document.getElementById('first');
+        //特性 任何对象
+        console.log(lu.getAttribute('class'));
+        console.log(lu.getAttribute('data-value'));
+        console.log(lu.getAttribute('checked'));
+        lu.setAttribute('checked',true);//特性改变 变成 true字符串 但是属性还是 boolean
+     
+        //属性 只能是字符串
+        console.log(lu.className);
+        console.log(lu.style);
+        console.log(lu.checked);
+        console.log(lu.selected);
+        console.log(lu.dataValue); 
+
+        
+        $('#first').attr('title','xxxx');
+        $('#first').attr({
+            title:'aaa',
+            name:'xxx'
+        });
+        var $title = $('#first').attr('title');
+        console.log($title);
+        
+        $('#first').removeAttr('title');
+
+
+        //jquery 操作属性
+        $('#first').prop('checked',false);
+
+        //data保留类型
+        $('#first').data('aa-data',{a:'tes'})
+        $('#first').data('aa-data')
+        $('#first').removeData('aa-data')
+
+    });
+</script>
+</body>
+</html>
