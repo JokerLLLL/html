@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="./jquery-3.3.1/jquery-3.3.1.js"></script>
+<body>
+    
+    <div class="test">
+        <ul class="test">
+            <li class="li1">test_li1</li>
+            <li class="li2">test_li2</li>
+            <li class="li3">test_li3</li>
+        </ul>
+        <div id='test'>test</div>
+    </div>
+<script>
+    var dom = document.getElementsByClassName('test')[0];
+    var jq = $('.test');
+    
+    console.log(dom);
+    console.log(jq);
+
+    console.log($(dom));
+    console.log(jq.get(0));
+    console.log(dom.nodeType);
+    console.log(dom.jquery);
+    console.log(jq.jquery);
+    console.log(jq.nodeType);
+    
+    div = $('<div>helle world</div>');
+    div.appendTo('body');
+    link = $('<a>',{
+        text:'baidu',
+        href:"http://www.baidu.com",
+        target:'_blank',
+        title:'goto baidu'
+    })
+    link.appendTo('body')
+    
+    link2 = $('<a>test</a>').attr({
+        text:'test',
+        href:'http://www.baidu.com',
+        target:'_blank',
+        title:"test2"
+    })
+
+    link2.appendTo('body')
+    
+    js = $('.test');
+    console.log(js.get(0));
+    console.log(js[0]);
+    console.log(js.toArray())
+    console.log($('.test').parents('div'))
+    console.log($('.test').contents());
+    console.log($('.test').find('li'));
+    
+
+    lis = $('.li1').add('.li2').not('li1').filter('.li2').filter(function(index){
+        return $(this).hasClass('.item4');
+    })
+    console.log(lis);
+    
+    
+    
+    
+    
+
+</script>
+</body>
+</html>
