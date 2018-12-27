@@ -80,7 +80,11 @@
     // end 去读取历史记录的堆栈 并弹出
     $('div').find('.class').find('ul').end().end();
 
-
+    //类数对象转换成数组
+    var $obj_array = $('div');
+    var real_array = Array.prototype.slice.call($obj_array)
+    console.log($obj_array);
+    console.log(real_array[0]);
     
 </script>
 </body>

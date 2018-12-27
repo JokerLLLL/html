@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="./../function.js"></script>
+<script src="./jquery-3.3.1/jquery-3.3.1.js"></script>
+<body>
+  <div id="body"></div>
+    <script>
+    //dom 0级事件
+    dom = document.getElementById('body');    
+    dom.onclick = function(event){
+        event.cancelBubble = true; //阻止莫冒泡
+    }
+
+    // dom 2级事件 (捕获过程)
+    dom.addEventListener('click',function(event){
+
+    },true);
+    dom.addEventListener('click',function(event){
+
+    },true);
+    dom.addEventListener('click',function(event){
+
+    },true);
+    //冒泡过程
+    dom.addEventListener('click',function(event){
+
+    },false);
+    dom.addEventListener('click',function(event){
+
+    },false);
+    dom.addEventListener('click',function(event){
+
+    },false);
+
+    </script>
+
+</body>
+</html>
