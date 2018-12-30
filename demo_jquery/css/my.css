@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#head {
+    width: 100%;
+    height: 80px;
+    background-color: aqua;
+}
+
+#head .logo {
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 150px;
+    height: 45px;
+    float: left;
+    font-size: 50px;
+}
+#head .logo img{
+    width: 150px;
+    height: 45px;
+}
+
+#head ul{
+    float: left;
+    font-size: 24px;
+    font-family: '微软雅黑';
+    line-height: 80px;
+    padding-left: 50px;
+}
+
+#head .right{
+    float:right;
+    padding-right: 50px;
+}
+
+#head li{
+    float:left;
+    list-style: none;
+    padding-left: 30px;
+}
+
+#head .right-title{
+    padding-right: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+#body{
+    width: 1200px;
+    /* height: 5000px; */
+    margin: 0 auto;
+    background-color: chartreuse;
+}
+
+#body .banner{
+    height: 450px;
+    background: url('./../images/001.jpg')
+}
+
+/*导航*/
+.nav
+{
+	position:absolute;
+	width : 280px;
+	height:450px;
+	background: #000;
+	color:#fff;
+
+	filter:alpha(opacity=50);  /*支持 IE 浏览器*/
+	-moz-opacity:0.50; /*支持 FireFox 浏览器*/
+	opacity:0.50;  /*支持 Chrome, Opera, Safari 等浏览器*/
+}
+.nav .item
+{
+	margin: 5px 20px;
+	padding: 10px;
+	text-align:left;
+	border-bottom:1px solid #aaa;
+}
+.nav .item:hover
+{
+	background:#666;
+	cursor: pointer;
+}
+.nav .item .title
+{
+	font-size:16px;
+	margin-bottom:10px;
+}
+.nav .item span
+{
+	margin-right : 9px;
+}
+
+.class-list .title{
+    text-align: left;
+    line-height: 45px;
+    color: #666;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.class-list .class-items{
+	float : left;
+	width : 22.33%;
+	margin: 32px 16px 0;
+}
+
+.class-list .class-items img
+{
+	max-width:100%;
+}
+
+.clear-float{
+    clear: both;
+}
+
+.class-list .class-items .desc
+{
+	text-align: center;
+}
+
+#foot{
+    text-align: center;
+    margin-top: 50px;
+    background: #eeeeee;
+    border-top: 1px solid #ddd;
+}
+
+#foot ul{
+    margin-top: 50px;
+    padding-left: 500px;
+    height: 50px;
+    width: 50%;
+}
+
+#foot li{
+    float: left;
+    height: 50px;
+    width: 16.66%;
+    list-style: none;
+}
+
+#foot .author{
+    padding-bottom: 50px;
+}

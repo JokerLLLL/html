@@ -9,8 +9,16 @@
 <script src="./../function.js"></script>
 <script src="./jquery-3.3.1/jquery-3.3.1.js"></script>
 <body>
-  <div id="body"></div>
+  <div id="body" style="width:20px;height:20px;background-color: crimson"></div>
+  <ul>
+      <li>新闻1<strong>aaa</strong><div>vvvv</div></li>
+      <li>新闻2</li>
+      <li>新闻3</li>
+      <li>新闻4</li>
+      <li>新闻5</li>
+  </ul>
     <script>
+        /*
     //dom 0级事件
     dom = document.getElementById('body');    
     dom.onclick = function(event){
@@ -19,24 +27,74 @@
 
     // dom 2级事件 (捕获过程)
     dom.addEventListener('click',function(event){
+        log(1);
+    },true);
+    dom.addEventListener('click',function(event){
+        log(2);
 
     },true);
     dom.addEventListener('click',function(event){
-
-    },true);
-    dom.addEventListener('click',function(event){
+        log(3);
 
     },true);
     //冒泡过程
     dom.addEventListener('click',function(event){
+        log(3);
 
     },false);
     dom.addEventListener('click',function(event){
+        log(2);
 
     },false);
     dom.addEventListener('click',function(event){
+        log(1);
 
     },false);
+*/
+    $('#body').on('click',['a','b'],function(event){
+            log(event.data)
+    }).on('click',function(evnet){
+        log('test')
+    }).on('mouseover',function(event){
+        log('ov')
+    })
+    
+    //事件的委托  点击li 委托给ul 处理
+    $('li').on('click',function(event){
+        // event.target父类方法
+
+        // event.stopPropagation(); 阻止冒泡事件触发
+
+        event.stopImmediatePropagation(); //阻止所以冒泡和本身的其他同名事件绑定
+        log($(this).html())
+    });
+
+    //一次事件
+    $('li').one('click',function(event){
+            console.log('aa');
+            
+    });
+    
+    $('li').off('click',$callback); //移除事件
+
+    //触发事件
+
+    $('li').trigger('click'); //触发所有
+    $('li').triggerHandler('click'); //触发单个
+
+    //快捷方法绑定      
+    // click monusout + monusein = hover ....
+    $('li').click(function($event){
+        log($event)
+    })
+    //触发
+    $('li').click();
+    //自定义事件 有命名空空间 self.a.b  在self.a 之下
+    $('li').on('self',function(){
+    })
+    $('li').on('self.son',function(){
+    })
+    $('li').trigger('self');
 
     </script>
 
