@@ -1,0 +1,40 @@
+body{
+    background: #ddd;
+}
+img{
+    border:none;
+    width: 260px;
+}
+a{
+    text-decoration: none;
+    color: #444;
+}
+a:hover{
+    color: #999;
+}
+
+#wrap{
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+#wrap > div {
+    float: left;
+    width: 280px;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#wrap > div >a {
+    display: block;
+    font-size:18px;
+    line-height: 40px;
+    font-weight: bolder;
+}
